@@ -2,21 +2,31 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "commonjs",
+    // "moduleResolution": "node",
     "lib": ["ES2022"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "baseUrl": ".",
     "paths": {
-      "@pages/*": ["src/pages/*"],
-      "@components/*": ["src/components/*"],
-      "@fixtures/*": ["src/fixtures/*"],
-      "@api-clients/*": ["src/api-clients/*"],
-      "@data/*": ["src/data/*"],
-      "@utils/*": ["src/utils/*"]
+      "@pages/*": ["./src/pages/*"],
+      "@components/*": ["./src/components/*"],
+      "@fixtures/*": ["./src/fixtures/*"],
+      "@api-clients/*": ["./src/api-clients/*"],
+      "@data/*": ["./src/data/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   },
-  "include": ["tests/**/*.ts", "src/**/*.ts", "ai/**/*.ts"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "ai/**/*.ts",
+    "ai/**/*.tsx",
+    "scripts/**/*.ts",
+    "scripts/**/*.tsx"
+  ],
+  "exclude": ["node_modules"]
 }
